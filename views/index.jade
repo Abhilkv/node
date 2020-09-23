@@ -1,0 +1,25 @@
+extend layout 
+
+block content   
+    h1 Add new Content
+    form(methode="POST", action='/new_contact')
+        p Name:
+        input#title(type="text", name="name")
+        p Phone:
+        input#title(type="text", name="phone")
+        p: button(type="submit") Add new Contact
+    h1 Add new DB
+    form(methode="POST", action='/createdb')
+        p DatabaseName:
+        input#title(type="text", name="dbname")
+        p: button(type="submit") Add new DB
+    h1 Delete Content
+    form(methode="POST", action='/delete_contact')
+        p Number to delete:
+        input#title(type="text", name="phone")
+        p: button(type="submit") Delete Contact
+    h1 View Content
+    form(methode="POST", action='/new_contact')
+        p Phone:
+        input#title(type="text", name="phone")
+        p: button(type="submit") Search Contact
